@@ -1,0 +1,14 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">Proyecto de NodeJS</a>
+    </div>
+    <div [collapse]="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li *ngFor="let item of menu" routerLinkActive="active">
+            <a routerLink="{{item.link}}">{{item.title}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

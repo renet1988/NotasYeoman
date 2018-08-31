@@ -1,0 +1,28 @@
+<div class="container">
+  
+    <h1>Notas</h1>
+    <div class="grid grid-pad">
+      <a *ngFor="let nota of awesomeNotas" class="col-1-4" routerLink="/detail/{{nota.id}}" >
+        <div class="module">
+          <h2 class="center">{{nota.id}}</h2>
+          <h4 class="center">{{nota.name}}</h4>
+          <h5 class="center">{{nota.body}}</h5>
+          <h6 class="center">{{nota.tipoNota}}</h6>
+          <button type="button" class="btn btn-danger" (click)="deleteNota(nota)">&times;</button>
+        </div>
+      </a>
+    </div>
+
+  <form class="nota-form">
+    <label>Agregar nuevas notas</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a name nota here." [(ngModel)]="name" name="name">
+      <input type="text" class="form-control" placeholder="Add a body nota here." [(ngModel)]="body" name="body">
+      <input type="text" class="form-control" placeholder="Add a tipoNota here." [(ngModel)]="tipoNota" name="tipoNota">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" (click)="addNota()">Add New</button>
+      </span>
+    </p>
+  </form>
+
+</div>

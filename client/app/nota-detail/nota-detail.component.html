@@ -1,0 +1,21 @@
+<div *ngIf="eNota">
+  <h2>{{ eNota.body | uppercase }} Details</h2>
+  <div>
+    <label>id: </label> 
+    <span>{{eNota.id}}</span>
+  </div>
+  <div>
+    <label>Nombre: </label>
+    <span>{{eNota.name}}</span>
+  </div>
+  <div>
+    <label>Cuerpo: </label>
+    <span>{{eNota.body}}</span>
+  </div>
+  <div>
+    <label>Tipo de Nota: </label>
+    <span>{{eNota.tiponota}}</span>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button>Editar</button>
+</div>
